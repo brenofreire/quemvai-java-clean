@@ -11,6 +11,7 @@ public class EventPoolModel {
     private String description;
     private String location;
     private boolean duringAllDay;
+    private int createdBy;
 
     private Date startDate;
     private Date endDate;
@@ -114,5 +115,11 @@ public class EventPoolModel {
         this.updatedAt = updatedAt;
     }
 
-    
+    public void setCreatedBy(int createdBy) {
+        this.createdBy = createdBy;
+    }
+
+    public int getCreatedBy() {
+        return createdBy;
+    }
 }
