@@ -9,13 +9,17 @@ public class EventPoolPersonModel {
     private int idEventPool;
     private int idUserAccount;
     private EventPoolStatus status;
+    private String personName;
 
     private LocalDate createdAt;
     private LocalDate updateAt;
 
-    public EventPoolPersonModel() {
+    public EventPoolPersonModel(EventPoolStatus status, int idEventPool) {
         LocalDate now = LocalDate.now();
 
+        this.idEventPool = idEventPool;
+
+        this.setStatus(status);;
         this.setCreatedAt(now);
         this.setUpdateAt(now);
     }
@@ -55,5 +59,21 @@ public class EventPoolPersonModel {
 
     public void setUpdateAt(LocalDate updateAt) {
         this.updateAt = updateAt;
+    }
+
+    public void setStatus(EventPoolStatus status) {
+        this.status = status;
+    }
+
+    public EventPoolStatus getStatus() {
+        return status;
+    }
+
+    public void setPersonName(String personName) {
+        this.personName = personName;
+    }
+
+    public String getPersonName() {
+        return personName;
     }
 }
