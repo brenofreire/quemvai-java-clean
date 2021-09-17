@@ -1,6 +1,6 @@
 package com.app.quemvai.infra.models;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 import com.app.quemvai.domain.entities.pool.EventPoolRecurrence;
 
@@ -13,15 +13,22 @@ public class EventPoolModel {
     private boolean duringAllDay;
     private int createdBy;
 
-    private Date startDate;
-    private Date endDate;
-    private Date startHourDate;
-    private Date endHourDate;
+    private LocalDate startDate;
+    private LocalDate endDate;
+    private LocalDate startHourDate;
+    private LocalDate endHourDate;
 
     private EventPoolRecurrence recurrence;
 
-    private Date createdAt;
-    private Date updatedAt;
+    private LocalDate createdAt;
+    private LocalDate updatedAt;
+
+    public EventPoolModel() {
+        LocalDate localDate = LocalDate.now();
+
+        this.setCreatedAt(localDate);
+        this.setUpdatedAt(localDate);
+    }
 
     public int getId() {
         return id;
@@ -59,35 +66,35 @@ public class EventPoolModel {
         this.duringAllDay = duringAllDay;
     }
 
-    public Date getStartDate() {
+    public LocalDate getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(Date startDate) {
+    public void setStartDate(LocalDate startDate) {
         this.startDate = startDate;
     }
 
-    public Date getEndDate() {
+    public LocalDate getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(Date endDate) {
+    public void setEndDate(LocalDate endDate) {
         this.endDate = endDate;
     }
 
-    public Date getStartHourDate() {
+    public LocalDate getStartHourDate() {
         return startHourDate;
     }
 
-    public void setStartHourDate(Date startHourDate) {
+    public void setStartHourDate(LocalDate startHourDate) {
         this.startHourDate = startHourDate;
     }
 
-    public Date getEndHourDate() {
+    public LocalDate getEndHourDate() {
         return endHourDate;
     }
 
-    public void setEndHourDate(Date endHourDate) {
+    public void setEndHourDate(LocalDate endHourDate) {
         this.endHourDate = endHourDate;
     }
 
@@ -99,19 +106,19 @@ public class EventPoolModel {
         this.recurrence = recurrence;
     }
 
-    public Date getCreatedAt() {
+    public LocalDate getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(Date createdAt) {
+    private void setCreatedAt(LocalDate createdAt) {
         this.createdAt = createdAt;
     }
     
-    public Date getUpdatedAt() {
+    public LocalDate getUpdatedAt() {
         return updatedAt;
     }
 
-    public void setUpdatedAt(Date updatedAt) {
+    public void setUpdatedAt(LocalDate updatedAt) {
         this.updatedAt = updatedAt;
     }
 

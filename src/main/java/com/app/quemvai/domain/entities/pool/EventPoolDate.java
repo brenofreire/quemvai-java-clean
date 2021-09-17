@@ -1,43 +1,43 @@
 package com.app.quemvai.domain.entities.pool;
 
-import java.sql.Date;
+import java.time.LocalDate;
 
 public class EventPoolDate {    
-    private Date startDate;
-    private Date endDate;
-    private Date startHourDate;
-    private Date endHourDate;
+    private LocalDate startDate;
+    private LocalDate endDate;
+    private LocalDate startHourDate;
+    private LocalDate endHourDate;
 
-    public Date getStartDate() {
+    public LocalDate getStartDate() {
         return startDate;
     
     }
     
-    public void setStartDate(Date startDate) {
+    public void setStartDate(LocalDate startDate) {
         this.startDate = startDate;
     }
 
-    public Date getEndDate() {
+    public LocalDate getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(Date endDate) {
+    public void setEndDate(LocalDate endDate) {
         this.endDate = endDate;
     }
 
-    public Date getStartHourDate() {
+    public LocalDate getStartHourDate() {
         return startHourDate;
     }
 
-    public void setStartHourDate(Date startHourDate) {
+    public void setStartHourDate(LocalDate startHourDate) {
         this.startHourDate = startHourDate;
     }
 
-    public Date getEndHourDate() {
+    public LocalDate getEndHourDate() {
         return endHourDate;
     }
 
-    public void setEndHourDate(Date endHourDate) {
+    public void setEndHourDate(LocalDate endHourDate) {
         this.endHourDate = endHourDate;
     }
 }

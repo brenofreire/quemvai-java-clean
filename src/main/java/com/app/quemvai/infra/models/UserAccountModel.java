@@ -1,7 +1,6 @@
 package com.app.quemvai.infra.models;
 
-import java.util.Date;
-
+import java.time.LocalDate;
 import com.app.quemvai.domain.entities.user.Password;
 import com.app.quemvai.domain.entities.user.Username;
 import com.app.quemvai.infra.models.entities.UserAccountStatus;
@@ -13,8 +12,8 @@ public class UserAccountModel {
     private String name;
     private String username;
     private String password;
-    private Date createdAt;
-    private Date updatedAt;    
+    private LocalDate createdAt;
+    private LocalDate updatedAt;    
     private UserAccountStatus status;
 
     public UserAccountModel(String name, Username username, Password password) {
@@ -39,11 +38,11 @@ public class UserAccountModel {
         return username;
     }
 
-    public Date getCreatedAt() {
+    public LocalDate getCreatedAt() {
         return createdAt;
     }
     
-    public Date getUpdatedAt() {
+    public LocalDate getUpdatedAt() {
         return updatedAt;
     }
 
