@@ -2,10 +2,13 @@ package com.app.quemvai.infra.models;
 
 import java.time.LocalDate;
 
+import com.app.quemvai.domain.entities.pool.EventPoolStatus;
+
 public class EventPoolPersonModel {
     private int id;
     private int idEventPool;
     private int idUserAccount;
+    private EventPoolStatus status;
 
     private LocalDate createdAt;
     private LocalDate updateAt;

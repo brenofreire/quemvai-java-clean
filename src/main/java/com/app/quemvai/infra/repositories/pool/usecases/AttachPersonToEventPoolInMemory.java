@@ -15,7 +15,6 @@ public class AttachPersonToEventPoolInMemory implements AttachPersonToEventPool 
 
     @Override
     public void attach(Collection<EventPoolPersonModel> listEventPoolPerson) {
-        this.repositoryiInMemory.eventPoolPersons.addAll(listEventPoolPerson);
-        
+        this.repositoryiInMemory.eventPoolPersons.addAll(listEventPoolPerson);        
     }
 }
